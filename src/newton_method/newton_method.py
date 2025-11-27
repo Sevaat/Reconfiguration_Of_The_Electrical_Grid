@@ -316,5 +316,4 @@ class NewtonMethod:
             self._voltage_correction(delta_voltage)
         self._currents()
         self._power_losses()
-        self._save()
 

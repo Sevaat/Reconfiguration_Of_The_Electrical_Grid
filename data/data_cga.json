@@ -11,7 +11,7 @@
   },
   "parameters":
   {
-    "number_of_individuals": 100,
+    "number_of_individuals": 10,
     "proportion_of_elite_individuals": 0.2,
     "number_of_eras": 10,
     "mutation_probability": 0.02,
@@ -21,10 +21,10 @@
     "number_of_recurring_individuals": 0,
     "gene_sets": {
       "simple_set": [
-        "0 1 2 3 4"
-      ],
-      "step_set": [
-        {"start":  5, "end": 9, "step":  1}
+        "0 1",
+        "0 1",
+        "0 1",
+        "0 1"
       ]
     }
   }

@@ -5,7 +5,7 @@ from math import atan
 
 
 class Node(BaseModel):
-    real_power: Union[float, int]               # активная мощность узла
+    real_power: Union[float, int]                           # активная мощность узла
     imaginary_power: Union[Union[float, int], str]          # реактивная мощность узла
     real_voltage: Union[float, int]                         # действительная часть напряжения
     imaginary_voltage: Union[float, int]                    # мнимая часть напряжения

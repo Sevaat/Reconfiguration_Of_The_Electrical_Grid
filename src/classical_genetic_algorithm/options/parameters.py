@@ -37,15 +37,17 @@ class Parameters(BaseModel):
         """
         gene_sets = []
         try:
-            for gs in data_gene_sets["simple_set"]:
-                gene_sets.append(gs.split())
-            for gs in data_gene_sets["step_set"]:
-                gene_set = []
-                start, end, step = gs["start"], gs["end"], gs["step"]
-                while start <= end:
-                    gene_set.append(str(start))
-                    start += step
-                gene_sets.append(gene_set)
+            if "simple_set" in data_gene_sets.keys():
+                for gs in data_gene_sets["simple_set"]:
+                    gene_sets.append(gs.split())
+            else:
+                for gs in data_gene_sets["step_set"]:
+                    gene_set = []
+                    start, end, step = gs["start"], gs["end"], gs["step"]
+                    while start <= end:
+                        gene_set.append(str(start))
+                        start += step
+                    gene_sets.append(gene_set)
         except Exception as e:
             print(e)
         return gene_sets

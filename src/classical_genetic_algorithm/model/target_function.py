@@ -22,6 +22,7 @@ class TargetFunction(ABC):
                 individual_parameters = ind.transcript_individual(parameters)
                 try:
                     ind.rank = TargetFunction.function(individual_parameters)
+                    print(ind.rank)
                 except Exception as e:
                     print(f"Ошибка: {e}")
                     print("Введена некорректная функция или функция принимает некорректные аргументы.")
